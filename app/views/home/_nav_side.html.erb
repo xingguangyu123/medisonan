@@ -81,13 +81,13 @@
         <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i><b>统计图表分析 </b><i class="fa fa-angle-down rotate-icon"></i></a>
           <div class="collapsible-body">
             <ul class="list-unstyled">
-              <li><a href="http://localhost:3000/home/line_chart" class="waves-effect" style="font-size:1.1rem"><b>随访方式</b></a>
+              <li><%= link_to "<b>线性图表</b>".html_safe, home_line_chart_path  , class:'waves-effect', style:'font-size:1.1rem' %>
               </li>
-              <li><a href="http://localhost:3000/home/bar_chart" class="waves-effect" style="font-size:1.1rem"><b>病症与习惯</b></a>
+              <li><%= link_to "<b>柱状图表</b>".html_safe, home_bar_chart_path  , class:'waves-effect', style:'font-size:1.1rem' %>
               </li>
-              <li><a href="http://localhost:3000/home/horizontal_bar_chart" class="waves-effect" style="font-size:1.1rem"><b>服用药品</b></a>
+              <li><%= link_to "<b>横柱图表</b>".html_safe, home_horizontal_bar_chart_path  , class:'waves-effect', style:'font-size:1.1rem' %>
               </li>
-              <li><a href="http://localhost:3000/home/pie_chart" class="waves-effect" style="font-size:1.1rem"><b>器械品牌</b></a>
+              <li><%= link_to "<b>饼状图表</b>".html_safe, home_pie_chart_path  , class:'waves-effect', style:'font-size:1.1rem' %>
               </li>
             </ul>
           </div>
