@@ -2,84 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af1b5f04-82cd-415b-a8a8-41b5f74713dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Thin.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Thin.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/font/roboto/Roboto-Thin.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/applicationHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/inputs/array_input.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/question_libraries/_index_for_survey.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/question_libraries/show_list_for_survey.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/questions/_add_selection.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/sub_surveys/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/surveys/_patientSubview.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/addons-pro/stepper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/addons-pro/stepper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/addons/datatables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/addons/datatables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/mdb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/mdb.lite.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/mdb.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/addons-pro/stepper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/addons-pro/stepper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/buttons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/cards.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/character-counter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/chips.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/collapsible.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/dropdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/file-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/forms-free.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/material-select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/mdb-autocomplete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/preloading.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/range-input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/scrolling-navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/sidenav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/smooth-scroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/modules/sticky.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/javascripts/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/addons/datatables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/addons/datatables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/mdb.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/mdb.lite.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/mdb.lite.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/mdb.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/accordion-extended.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/accordion-extended.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/animations-extended.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/animations-extended.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/charts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/charts.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/lightbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/lightbox.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/megamenu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/megamenu.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/parallax.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/modules/parallax.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -416,62 +342,98 @@
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Gemfile" value="1" />
+          <entry key="md" value="1" />
+          <entry key="rb" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Markdown" value="1" />
+          <entry key="Ruby" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Gemfile" value="2" />
+          <entry key="rb" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Ruby" value="4" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-646" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-750">
+              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/application.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/initializers/cookies_serializer.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/home/_nav_side.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="75" column="64" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="432">
+                <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/sub_surveys/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
-              <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/config/boot.rb">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/answers/_single.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="48" selection-start-column="48" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/question_libraries/_single_selection.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="38" column="95" selection-start-line="37" selection-start-column="6" selection-end-line="38" selection-end-column="95" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/patients/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="8" selection-start-line="3" selection-end-line="28" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/surveys/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -542,15 +504,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/questions/_question_list.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20181207102526_add_info_3_to_answers.rb" />
         <option value="$PROJECT_DIR$/app/controllers/questions_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/questions/_edit_form.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20181210092349_add_info_to_surveys_1210_1.rb" />
         <option value="$PROJECT_DIR$/app/views/dummy_surveys/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/dummy_surveys_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/surveys_controller.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/patients.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/patients.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/applicationPage.css.scss" />
@@ -593,6 +552,9 @@
         <option value="$PROJECT_DIR$/app/views/sub_surveys/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/answers/_single.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_nav_side.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
       </list>
     </option>
   </component>
@@ -615,9 +577,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="111" />
-    <option name="width" value="1585" />
-    <option name="height" value="1040" />
+    <option name="y" value="115" />
+    <option name="width" value="1304" />
+    <option name="height" value="1086" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -649,174 +611,19 @@
         <subPane>
           <expand>
             <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
+              <item name="LBD-DHR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LBD-DHR" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="channels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="inputs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="answers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="dummy_surveys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="patients" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="question_libraries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="questions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="sub_surveys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="surveys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
+              <item name="LBD-DHR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LBD-DHR" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-              <item name="addons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LBDNew1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LBDNew1" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="LBD-DHR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LBD-DHR" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -997,12 +804,12 @@
       <workItem from="1545102393131" duration="4343000" />
       <workItem from="1545189393062" duration="5846000" />
       <workItem from="1545269341956" duration="9739000" />
-      <workItem from="1545314715222" duration="541000" />
+      <workItem from="1545314715222" duration="3023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="484502000" />
+    <option name="totallyTimeSpent" value="486984000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1014,9 +821,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="111" width="1585" height="1040" extended-state="0" />
+    <frame x="0" y="115" width="1304" height="1086" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35191187" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25435817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1029,13 +836,13 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.329148" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4992057" visible="true" weight="0.39281943" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4992057" visible="true" weight="0.37462234" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007943" side_tool="true" weight="0.29617834" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.3298887" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.25210628" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.18541996" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1045,59 +852,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/patients.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181112181051_add_column_to_questions.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="81" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181211113936_add_info_to_question_libraries.rb" />
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181211114343_add_info2_to_question_libraries.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/surveys/_choosePatient.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/answers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181122104602_change_sex_for_patient.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20181212053811_add_info3_to_question_libraries.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c7ddf1c8-708d-47fc-84d0-8df8ed975568/database/LBD_development/schema/public/table/questions">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/jobs/application_job.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1371,6 +1125,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1296">
           <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-750">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/boot.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/cookies_serializer.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="432">
+            <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
