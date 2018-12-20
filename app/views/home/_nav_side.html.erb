@@ -1,0 +1,101 @@
+<!-- Sidebar navigation -->
+<div id="slide-out" class="side-nav sn-bg-4 fixed">
+  <ul class="custom-scrollbar">
+    <!-- Logo -->
+    <li>
+      <br/>
+      <br/>
+      <div class="logo-wrapper waves-light">
+        <div class="row">
+          <div class="col-3 offset-3">
+        <div class="loader border-top-primary border-right-warning border-bottom-success border-left-danger"></div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <!--/. Logo -->
+    <!--Social-->
+    <li>
+      <ul class="social">
+        <li><a href="#" class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a></li>
+        <li><a href="#" class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a></li>
+        <li><a href="#" class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a></li>
+        <li><a href="#" class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a></li>
+      </ul>
+    </li>
+    <!--/Social-->
+    <!--Search Form-->
+    <li>
+      <form class="search-form" role="search">
+        <div class="form-group md-form mt-0 pt-1 waves-light">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form>
+    </li>
+    <!--/.Search Form-->
+    <!-- Side navigation links -->
+    <li>
+      <ul class="collapsible collapsible-accordion">
+        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i><b>随访项目</b> <i class="fa fa-angle-down rotate-icon"></i></a>
+          <div class="collapsible-body">
+            <ul class="list-unstyled">
+              <li><%= link_to "<b>新增随访项目</b>".html_safe, new_survey_path, class:'waves-effect', style:'font-size:1.1rem' %>
+              <li><%= link_to "<b>随访项目一览</b>".html_safe, surveys_path, class:'waves-effect', style:'font-size:1.1rem' %>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i><b>任务一览</b> <i class="fa fa-angle-down rotate-icon"></i></a>
+          <div class="collapsible-body">
+            <ul class="list-unstyled">
+              <li><%= link_to "<b>随访任务一览</b>".html_safe, sub_surveys_path, class:'waves-effect', style:'font-size:1.1rem' %>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i><b>患者信息</b><i class="fa fa-angle-down rotate-icon"></i></a>
+          <div class="collapsible-body">
+            <ul class="list-unstyled">
+              <li><%= link_to "<b>新增患者信息</b>".html_safe, new_patient_path, class:'waves-effect', style:'font-size:1.1rem' %>
+              <li><%= link_to "<b>患者列表</b>".html_safe, patients_path, class:'waves-effect', style:'font-size:1.1rem' %>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i><b>问题库</b><i class="fa fa-angle-down rotate-icon"></i></a>
+          <div class="collapsible-body">
+            <ul class="list-unstyled">
+              <li><%= link_to "<b>题库一览</b>".html_safe, question_libraries_path, class:'waves-effect', style:'font-size:1.1rem' %>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i><b>数据导出</b><i class="fa fa-angle-down rotate-icon"></i></a>
+          <div class="collapsible-body">
+            <ul class="list-unstyled">
+              <li><%= link_to "<b>数据导出</b>".html_safe, root_path  , class:'waves-effect', style:'font-size:1.1rem' %>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i><b>统计图表分析 </b><i class="fa fa-angle-down rotate-icon"></i></a>
+          <div class="collapsible-body">
+            <ul class="list-unstyled">
+              <li><a href="http://localhost:3000/home/line_chart" class="waves-effect" style="font-size:1.1rem"><b>随访方式</b></a>
+              </li>
+              <li><a href="http://localhost:3000/home/bar_chart" class="waves-effect" style="font-size:1.1rem"><b>病症与习惯</b></a>
+              </li>
+              <li><a href="http://localhost:3000/home/horizontal_bar_chart" class="waves-effect" style="font-size:1.1rem"><b>服用药品</b></a>
+              </li>
+              <li><a href="http://localhost:3000/home/pie_chart" class="waves-effect" style="font-size:1.1rem"><b>器械品牌</b></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <!--/. Side navigation links -->
+  </ul>
+  <div class="sidenav-bg mask-strong"></div>
+</div>
+<!--/. Sidebar navigation -->

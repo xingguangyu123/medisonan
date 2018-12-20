@@ -1,0 +1,40 @@
+<%= simple_form_for (@survey) do |f| %>
+  <table class="table table-bordered table table-striped col-12">
+    <!-- Table head -->
+    <thead>
+    <tr>
+      <th>患者姓名</th>
+      <th>受访类型</th>
+      <th>年龄</th>
+      <th>主治医生</th>
+      <th>就诊时病症</th>
+      <th>既往病史</th>
+      <th>用药史</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= f.collection_check_boxes :patient_ids, Patient.all, :id, :name, unchecked: Patient.all.map(&:id) do |b| %>
+      <tr>
+        <th scope="row">
+          <%= b.check_box(class:'form-check-input') %>
+          <%= b.label %>
+        </th>
+        <td>
+          <% if b.object.surveyType == 1 %>
+            通过智能手机
+          <% else %>
+            通过接听电话
+          <% end %>
+        </td>
+        <td><%= b.object.age %></td>
+        <td><%= b.object.mainDoctor %></td>
+        <td><%= b.object.currentSick %></td>
+        <td><%= b.object.sickHistory %></td>
+        <td><%= b.object.medical_history %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <%= f.submit "完成", class:'btn btn-primary' %>
+<% end %>

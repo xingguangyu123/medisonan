@@ -1,0 +1,96 @@
+<div class="col-12">
+  <%= simple_form_for @question_library, class:'add_single_selection', remote:true  do |f| %>
+    <%= f.input :description, label:'问题描述', class:'required validate', wrapper_html:{ class:'' } , input_html:{ class:'form-control' } %>
+    <%= f.input :questiontype, :as => :hidden, input_html:{ value:"1" } %>
+
+    <hr>
+
+    <label>选项列表</label>
+    <a class="btn-floating btn-sm btn-ins floating-button" type="button" role="button" id="addEmail"><i class="fa fa-plus"></i></a>
+
+    <%= f.input :selections, label:false, label_html: { class:'' }, input_html:{ class:'form-control add-single-selection' } , as: :array %>
+
+    <br/>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">日期描述</span>
+        <div class="input-group-text">
+          <input class="form-check-input filled-in" type="checkbox" value=true id="single-date-checkbox" name="question_library[has_date_field]">
+          <label class="form-check-label" for="single-date-checkbox"></label>
+        </div>
+      </div>
+      <input type="text" class="form-control" aria-label="Text input with checkbox" value="具体日期是:" name="question_library[date_field_description]">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">主观描述</span>
+        <div class="input-group-text">
+          <input class="form-check-input filled-in" type="checkbox" value=true id="single-subjective-checkbox" name="question_library[has_comment_field]">
+          <label class="form-check-label" for="single-subjective-checkbox"></label>
+        </div>
+      </div>
+      <input type="text" class="form-control" aria-label="Text input with checkbox" value="请具体描述:" name="question_library[comment_field_description]">
+    </div>
+
+    <div class="modal-footer flex-center">
+      <%= f.button :submit, '保存', class:'btn btn-success waves-effect', id:'question_library_submit_single', remote:true%>
+      <input type="button" value="取消" class="btn btn-danger waves-effect" data-dismiss="modal">
+    </div>
+  <% end %>
+
+</div>
+
+<script>
+    function onReady() {
+        $('#addEmail').click(addEmailField)
+        $('#question_library_submit_single').click(closeCurrentModal)
+
+        let $firstField = $('input[name="question_library[selections][]"]:first-of-type');
+        $firstField.hide();
+
+        validateSingleSelection();
+    }
+
+    function addEmailField() {
+        let $lastEmailField;
+        $lastEmailField = $('input[name="question_library[selections][]"]:nth-last-of-type(1)').clone().slice(0, 1);
+        $lastEmailField.val("");
+        $lastEmailField.show();
+        let $minusButton = $('<div class="input-group-append"><button class="minus-button btn btn-md btn-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" onclick="removeDiv(this)" ">X</button></div>');
+        $(".input.question_library_selections").append($lastEmailField).append($minusButton);
+        $lastEmailField.next().addBack().wrapAll('<div class="input-group mb-3"/>');
+
+        return false;
+    }
+
+    function removeDiv(el) {
+        $(el).parent().parent().remove();
+    }
+
+    function closeCurrentModal(){
+        setTimeout(
+            function()
+            {
+                $('#question_library_list').empty();
+                $('#question_library_list').append('<%= j render('question_libraries/question_index') %>');
+            }, 100);
+
+    }
+
+    $('#basicExampleModal').on('hidden.bs.modal', function (e) {
+        $(this).find('form')[0].reset();
+        $(".minus-button").parent().parent().remove();
+    })
+
+    function validateSingleSelection() {
+        $('.new_single_selection').validate({
+            debug: false,
+            rules: {'question_library[description]': { required: true, minlength: 3, maxlength: 100 }
+            }
+        })
+    }
+
+    onReady()
+</script>

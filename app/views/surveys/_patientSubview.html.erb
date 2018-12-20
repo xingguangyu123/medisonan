@@ -1,0 +1,31 @@
+<table>
+
+  <tbody>
+  <% @patients.each do |patient| %>
+    <tr>
+      <a type="button" id="addPatient" class="btn-primary btn" t><%= patient.name %></a>
+
+    </tr>
+  <% end %>
+  </tbody>
+
+</table>
+<script>
+
+    // console.log($('#addEmail'))
+    // document.getElementById('#addEmail').onclick(addEmailField())
+    function onReady() {
+        $('#addPatient').click(addPatientFunction)
+    }
+
+    function addPatientFunction() {
+
+    }
+
+    function removeDiv(el) {
+        $(el).prev().remove();
+        $(el).remove();
+    }
+
+    onReady()
+</script>

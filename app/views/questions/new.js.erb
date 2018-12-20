@@ -1,0 +1,2 @@
+$('#questionsList').clear();
+$('#questionsList').append("<%= j render partial: 'questions/show_questions', locals: {questions: @questions } %>");

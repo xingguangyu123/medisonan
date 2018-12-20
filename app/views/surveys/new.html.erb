@@ -1,0 +1,17 @@
+<h1>新建随访项目</h1>
+
+<%= render 'form', survey: @survey %>
+
+<script>
+    function onReady() {
+        setTimeout(
+            function()
+            {
+                $(".button-collapse").sideNav();
+                var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+                Ps.initialize(sideNavScrollbar);
+            }, 100);
+    }
+
+    onReady()
+</script>

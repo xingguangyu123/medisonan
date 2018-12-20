@@ -1,0 +1,75 @@
+<div style="flex:1;height:100%;width:100%;">
+
+    <% @questions_in_current_survey.each_with_index do |q, index| %>
+      <% if q.questiontype == 1 %>
+        <h4>
+          <span class="badge badge-pill badge-primary">单</span>
+          &nbsp;<b><%= index + 1 %>.<%= q.description %></b>
+          <%= link_to ("<i class='fa fa-edit'></i>").html_safe, {controller: 'questions', action: 'edit', id: q.id}, class:"btn-floating btn-sm blue-gradient floating-button", remote:true %>
+          <%= link_to ("<i class='fa fa-trash'></i>").html_safe, q, method: :delete, data:{ confirm:'are you sure?'}, class:"btn-floating btn-sm purple-gradient floating-button", remote:true %>
+        </h4>
+        <% q.selections.each do |s| %>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="i1" name="d1">
+            <label class="form-check-label" for="materialUncheckedDisabled2"> <%= s %></label>
+          </div>
+        <% end %>
+      <% end %>
+
+      <% if q.questiontype == 2 %>
+        <h4>
+          <span class="badge badge-pill badge-default">多</span> &nbsp;&nbsp;<b><%= index + 1 %>.<%= q.description %></b>
+          <%= link_to ("<i class='fa fa-edit'></i>").html_safe, {controller: 'questions', action: 'edit', id: q.id}, class:"btn-floating btn-sm blue-gradient floating-button", remote:true %>
+          <%= link_to ("<i class='fa fa-trash'></i>").html_safe, q, method: :delete, data:{ confirm:'are you sure?'}, class:"btn-floating btn-sm purple-gradient floating-button", remote:true %>
+
+        </h4>
+        <% q.multipleselections.each do |s| %>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+            <label class="form-check-label text-dark"><%= s %></label>
+          </div>
+        <% end %>
+      <% end %>
+
+      <% if q.questiontype == 4 %>
+        <h4>
+          <span class="badge badge-pill badge-warning">主观</span> &nbsp;<b><%= q.description %></b>
+        </h4>
+        <textarea class="form-control disabled" rows="3" ></textarea>
+      <% end %>
+
+      <% if q.has_date_field %>
+        <div class="md-form col-3">
+          <input type="text" id="form1" class="form-control" disabled>
+          <label for="form1"><%= q.date_field_description %></label>
+        </div>
+      <% end %>
+
+      <% if q.has_comment_field %>
+        <div class="md-form">
+          <input type="text" id="form1" class="form-control" disabled>
+          <label for="form1"><%= q.comment_field_description %></label>
+        </div>
+      <% end %>
+
+      <br/>
+      <hr>
+    <% end %>
+
+</div>
+
+<div class="modal fade" id="editQuestionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-notify modal-info" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-center">
+        <p class="heading">编辑问题</p>
+      </div>
+      <div class="modal-body" id="edit-question-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

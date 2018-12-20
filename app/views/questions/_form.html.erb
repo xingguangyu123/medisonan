@@ -1,0 +1,64 @@
+<div class="col-10 offset-1">
+  <%= simple_form_for question, remote:true do |q| %>
+    <%= q.input :description, input_html:{ value:question.description, class:'form-control' } %>
+    <%= q.input :selections, label:false, label_html: { class:'' }, input_html:{ class:'form-control edit-single-selections '} , as: :array %>
+
+    <a type="button" id="<%= question.id %>" class="btn-primary btn edit-single-add-answer" onclick="editSingleAddSelection(event,<%= question.id %>)">添加选项<i class="fa fa-plus-circle ml-1 text-white"></i></a>
+
+    <div class="modal-footer">
+      <div class="btn-group" role="group" aria-label="button-group">
+        <%= q.button :submit, '完成', class:'btn btn-success btn-block', onclick:'closeCurrentModal()', remote:true %>
+        <button type="button" class="btn btn-danger btn-block" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<script>
+    function onReady() {
+        //$('.edit-single-add-answer').click(editSingleAddSelection());
+    }
+
+    function editSingleAddSelection(event,myID) {
+        if (event.target.id == myID){
+            alert(event.target.id);
+            alert(myID);
+            let $lastEmailField;
+            $lastEmailField = $('input[name="question[selections][]"]:nth-last-of-type(1)').clone().slice(0, 1);
+            $lastEmailField.val("");
+            $lastEmailField.show();
+            let $minusButton = $('<div class="input-group-append"><button class="minus-button btn btn-md btn-outline-default m-0 px-3 py-2 z-depth-0 waves-effect" type="button" onclick="removeDiv(this)" ">删除选项</button></div>');
+            $(".input.question_selections, .edit-single-add-answer").append($lastEmailField).append($minusButton);
+            //$(this).closest(".input.question_selections, .edit-single-selections").append($lastEmailField).append($minusButton);
+            $lastEmailField.next().addBack().wrapAll('<div class="input-group mb-3"/>');
+        }
+
+        return false;
+    }
+
+    function removeDiv(el) {
+        $(el).parent().parent().remove();
+    }
+
+    function closeCurrentModal(){
+        $('.edit-question-modal').modal('hide');
+        $('.modal-backdrop').remove();
+        setTimeout(
+            function()
+            {
+                $('#questionsList').empty();
+                $('#questionsList').append('<%= j render('questions/question_index') %>');
+            }, 100);
+
+    }
+
+    $('.edit-question-modal').on('hidden.bs.modal', function (e) {
+        $(this).find('form')[0].reset();
+        $(".minus-button").parent().parent().remove();
+    })
+
+
+
+    onReady()
+</script>

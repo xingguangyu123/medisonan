@@ -1,0 +1,84 @@
+<!-- Card -->
+<div class="card card-cascade wider col-4">
+
+  <!-- Card image -->
+  <div class="view view-cascade gradient-card-header blue-gradient">
+
+    <!-- Title -->
+    <h2 class="card-header-title mb-3">随访方式趋势</h2>
+    <!-- Text -->
+    <p class="mb-0"><i class="fa fa-calendar mr-2"></i>截至11.23.2018</p>
+
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body card-body-cascade text-center">
+
+    <!-- Text -->
+    <p class="card-text">通过接听电话接受随访的患者数目基本稳定，因为此种方法比较传统，患者可以第一时间理解。其缺点是有时容易引起患者的反感。</p>
+    <p class="card-text">由于方式相对新颖，通过智能手机接收随访的患者开始较少，但是患者实际操作后普遍反应此种方法更有弹性和便捷。另外，引入参加
+    智能手机随访可以领取红包的功能后通过该种方式接受随访的患者数量明显提高。</p>
+    <!-- Link -->
+    <a href="#!" class="orange-text d-flex flex-row-reverse p-2">
+      <h5 class="waves-effect waves-light">Read more<i class="fa fa-angle-double-right ml-2"></i></h5>
+    </a>
+
+  </div>
+  <!-- Card content -->
+
+</div>
+<!-- Card -->
+
+<br>
+<br>
+<br>
+
+<div class="col-8">
+  <canvas id="lineChart"></canvas>
+</div>
+
+
+<script>
+    function onReady() {
+        setTimeout(
+            function()
+            {
+                //line
+                var ctxL = document.getElementById("lineChart").getContext('2d');
+                var myLineChart = new Chart(ctxL, {
+                    type: 'line',
+                    data: {
+                        labels: ["五月", "六月", "七月", "八月", "九月", "十月", "十一月"],
+                        datasets: [{
+                            label: "通过接听电话",
+                            data: [65, 59, 80, 81, 56, 55, 40],
+                            backgroundColor: [
+                                'rgba(105, 0, 132, .2)',
+                            ],
+                            borderColor: [
+                                'rgba(200, 99, 132, .7)',
+                            ],
+                            borderWidth: 2
+                        },
+                            {
+                                label: "通过智能手机",
+                                data: [28, 48, 40, 19, 86, 27, 90],
+                                backgroundColor: [
+                                    'rgba(0, 137, 132, .2)',
+                                ],
+                                borderColor: [
+                                    'rgba(0, 10, 130, .7)',
+                                ],
+                                borderWidth: 2
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true
+                    }
+                });
+            }, 100);
+    }
+
+    onReady()
+</script>

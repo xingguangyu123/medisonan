@@ -1,0 +1,65 @@
+<%= form_for (@dummy), class:'new_single_selection',  remote:true do |f|%>
+
+  <div class="md-form">
+    <%= f.text_field :name, class:'required form-control', id:'dummy-name' %>
+    <label for="dummy-name">项目名称</label>
+  </div>
+
+  <div class="md-form">
+    <%= f.text_field :description, class:'required form-control', id:'dummy-description' %>
+    <label for="dummy-description">项目概述</label>
+  </div>
+
+  <div class="form-row">
+    <div class="col-6">
+      <!-- Start date -->
+      <div class="md-form">
+        <%= f.text_field :start_date, class:'form-control datepicker', id:'dummy-start-date' %>
+        <label for="dummy-start-date">起始时间</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col">
+      <div class="md-form">
+        <%= f.text_field :frequency, class:'required form-control', id:'dummy-frequency' %>
+        <label for="dummy-frequency">随访次数</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="md-form">
+        <%= f.text_field :interval, class:'required form-control', id:'dummy-interval' %>
+        <label for="dummy-interval">每次随访间隔天数</label>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label>使用图表分析</label>
+    <label class="bs-switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <%= f.submit "下一步", class:'btn btn-primary next-step', id:'continueButton' %>
+<% end %>
+
+
+<script>
+    function onReady() {
+        setTimeout(
+            function()
+            {
+                $('.datepicker').pickadate();
+                $('.mdb-select').materialSelect();
+            }, 100);
+    }
+
+    function openDatePicker(){
+        $('.datepicker').pickadate();
+    }
+
+    onReady()
+</script>

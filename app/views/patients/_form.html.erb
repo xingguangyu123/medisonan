@@ -1,0 +1,122 @@
+<div class="card col-8 offset-2">
+  <h5 class="card-header info-color white-text text-center py-4">
+    <strong>添加新患者</strong>
+  </h5>
+
+  <div class="card-body px-lg-5 pt-0">
+    <%= form_for (@patient) do |f| %>
+      <div class="md-form">
+        <%= f.text_field :name, class:'required form-control', id:'add-patient-name' %>
+        <label for="add-patient-name">患者姓名</label>
+      </div>
+
+      <div class="md-form">
+        <%= f.text_field :age, class:'required form-control', id:'add-patient-age' %>
+        <label for="add-patient-age">年龄</label>
+      </div>
+
+      <label>性别</label>
+
+      <div class="row">
+        <div class="col-2">
+          <div class="form-check">
+            <%= f.radio_button :sex, "男", class:'form-check-input', id:'add-patient-gender-man' %>
+            <label class="form-check-label" for="add-patient-gender-man">男</label>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="form-check">
+            <%= f.radio_button :sex, "女", class:'form-check-input', id:'add-patient-gender-woman' %>
+            <label class="form-check-label" for="add-patient-gender-woman">女</label>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <div class="progress md-progress">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+
+      <div class="md-form">
+        <%= f.text_field :phone, class:'required form-control', id:'add-patient-phone' %>
+        <label for="add-patient-phone">手机号码</label>
+      </div>
+
+      <label>手机类型</label>
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+            <%= f.radio_button :cellPhoneType, "iPhone", class:'form-check-input', id:'add-patient-cellPhoneType-iPhone' %>
+            <label class="form-check-label" for="add-patient-cellPhoneType-iPhone">苹果</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-check">
+            <%= f.radio_button :cellPhoneType, "Android", class:'form-check-input', id:'add-patient-cellPhoneType-android' %>
+            <label class="form-check-label" for="add-patient-cellPhoneType-android">安卓</label>
+          </div>
+        </div>
+      </div>
+
+      <label>是否接受随访</label>
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+            <%= f.radio_button :acceptSurvey, true, class:'form-check-input', id:'add-patient-acceptSurvey-true' %>
+            <label class="form-check-label" for="add-patient-acceptSurvey-true">是</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-check">
+            <%= f.radio_button :acceptSurvey, false, class:'form-check-input', id:'add-patient-acceptSurvey-false' %>
+            <label class="form-check-label" for="add-patient-acceptSurvey-false">否</label>
+          </div>
+        </div>
+      </div>
+
+      <label>随访方式</label>
+      <div class="row">
+        <div class="col-6">
+          <div class="form-check">
+            <%= f.radio_button :surveyType, 0, class:'form-check-input', id:'add-patient-surveyType-phone' %>
+            <label class="form-check-label" for="add-patient-surveyType-phone">通过接听电话</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-check">
+            <%= f.radio_button :surveyType, 1, class:'form-check-input', id:'add-patient-surveyType-web' %>
+            <label class="form-check-label" for="add-patient-surveyType-web">通过智能手机</label>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="progress md-progress">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="add-patient-currentSick">就诊时病症</label>
+        <%= f.text_area :currentSick, class:'form-control rounded-1', id:'add-patient-currentSick', rows:5 %>
+      </div>
+
+      <div class="form-group">
+        <label for="add-patient-sickHistory">既往病史</label>
+        <%= f.text_area :sickHistory, class:'form-control rounded-1', id:'add-patient-sickHistory', rows:5 %>
+      </div>
+
+      <div class="form-group">
+        <label for="add-patient-medicalHistory">用药史</label>
+        <%= f.text_area :medical_history, class:'form-control rounded-1', id:'add-patient-medicalHistory', rows:5 %>
+      </div>
+
+
+      <div class="actions">
+        <% if false %>
+        <%= f.submit "创建患者档案", class:'btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect' %>
+        <% end %>
+        <%= f.submit "创建患者档案", class:'btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect' %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

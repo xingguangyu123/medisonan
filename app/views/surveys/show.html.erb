@@ -1,0 +1,101 @@
+<!-- Card -->
+<div class="card card-cascade">
+
+  <!-- Card image -->
+  <div class="view view-cascade gradient-card-header blue-gradient">
+
+    <!-- Title -->
+    <h2 class="card-header-title mb-3"><%= @survey.name %></h2>
+    <!-- Subtitle -->
+    <p class="card-header-subtitle mb-0">Deserve for her own card</p>
+
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body card-body-cascade text-center">
+
+    <!-- Text -->
+    <p class="card-text"><%= @survey.description %></p>
+
+    <hr>
+
+    <!-- Twitter -->
+    <a class="px-2 fa-lg tw-ic"><i class="fa fa-twitter"> </i></a>
+    <!-- Linkedin -->
+    <a class="px-2 fa-lg li-ic"><i class="fa fa-linkedin"> </i></a>
+    <!-- Facebook -->
+    <a class="px-2 fa-lg fb-ic"><i class="fa fa-facebook"> </i></a>
+    <!-- Email -->
+    <a class="px-2 fa-lg email-ic"><i class="fa fa-envelope"> </i></a>
+
+  </div>
+
+</div>
+
+<br>
+<br>
+
+<div class="card-header white-text primary-color">
+  <h5>问题列表</h5>
+</div>
+<table id="survey_show_question_table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <thead>
+  <tr>
+    <th>问题类型</th>
+    <th>问题描述</th>
+    <th>选项及备注</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @survey.questions.each do |q| %>
+    <tr>
+      <td>
+        <% if q.questiontype == 1 %>
+          单选
+        <% elsif q.questiontype == 2 %>
+          多选
+        <% end %>
+      </td>
+      <td><%= q.description%></td>
+      <td>
+        <% if q.questiontype == 1 %>
+          <% q.selections.each do |s| %>
+            <span class="badge badge-pill badge-default"><%= s %></span>
+          <% end %>
+        <% elsif q.questiontype == 2 %>
+          <% q.multipleselections.each do |s| %>
+            <span class="badge badge-pill badge-primary"><%= s %></span>
+          <% end %>
+        <% end %>
+        <% if q.has_date_field %>
+          <span class="badge badge-secondary"><%= q.date_field_description %></span>
+        <% end %>
+        <% if q.has_comment_field %>
+          <span class="badge badge-secondary"><%= q.comment_field_description %></span>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Edit', edit_survey_path(@survey) %>
+<%= link_to 'Back', surveys_path %>
+
+<br/>
+<br/>
+<br/>
+
+<h5>总计<%= @survey.frequency %>次随访</h5>
+<h5>每次随访间隔<%= @survey.interval %>天</h5>
+<div class="list-group col-1">
+  <% @sub_surveys.each_with_index do |sub, index| %>
+    <%= link_to sub.start_date, sub_survey_path(sub), class:'list-group-item list-group-item-primary'%>
+  <% end %>
+</div>
+
+<br>
+<br>
+

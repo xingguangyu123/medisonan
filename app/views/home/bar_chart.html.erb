@@ -1,0 +1,88 @@
+<!-- Card -->
+<div class="card card-cascade wider col-4">
+
+  <!-- Card image -->
+  <div class="view view-cascade gradient-card-header blue-gradient">
+
+    <!-- Title -->
+    <h2 class="card-header-title mb-3">勃起功能障碍与吸烟频度的关系</h2>
+    <!-- Text -->
+    <p class="mb-0"><i class="fa fa-calendar mr-2"></i>统计于2018.10.11</p>
+
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body card-body-cascade text-center">
+
+    <!-- Text -->
+    <p class="card-text">通过接听电话接受随访的患者数目基本稳定，因为此种方法比较传统，患者可以第一时间理解。其缺点是有时容易引起患者的反感。</p>
+    <p class="card-text">由于方式相对新颖，通过智能手机接收随访的患者开始较少，但是患者实际操作后普遍反应此种方法更有弹性和便捷。另外，引入参加
+      智能手机随访可以领取红包的功能后通过该种方式接受随访的患者数量明显提高。</p>
+    <!-- Link -->
+    <a href="#!" class="orange-text d-flex flex-row-reverse p-2">
+      <h5 class="waves-effect waves-light">Read more<i class="fa fa-angle-double-right ml-2"></i></h5>
+    </a>
+
+  </div>
+  <!-- Card content -->
+
+</div>
+<!-- Card -->
+
+<br>
+<br>
+<br>
+
+<div class="col-8">
+  <canvas id="barChart"></canvas>
+</div>
+
+
+<script>
+    function onReady() {
+        setTimeout(
+            function()
+            {
+                //bar
+                var ctxB = document.getElementById("barChart").getContext('2d');
+                var myBarChart = new Chart(ctxB, {
+                    type: 'bar',
+                    data: {
+                        labels: ["从不吸烟", "曾经吸烟但已经戒烟", "吸烟频度为小于10支每天", "吸烟频度为10~20支每天", "吸烟频度为20~40支每天", "吸烟频度为大于20支每天"],
+                        datasets: [{
+                            label: '患者人数',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            }, 100);
+    }
+
+    onReady()
+</script>

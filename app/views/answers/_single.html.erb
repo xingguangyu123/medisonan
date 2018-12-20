@@ -1,0 +1,87 @@
+<div class="card-header white-text primary-color-color text-center">
+  <h5><%= Patient.find(session[:current_patient_id]).name %>&nbsp;&nbsp;<%= Patient.find(session[:current_patient_id]).phone %>
+    &nbsp;&nbsp;<%= Patient.find(session[:current_patient_id]).sex %>
+  </h5>
+</div>
+
+<br>
+<hr>
+
+<%= form_with scope: :sub_survey, url: create_answers_path do |f| %>
+  <% @sub.survey.questions.each_with_index do |q, q_index| %>
+    <h3>
+      <strong>问题<%= q_index + 1 %>.<%= q.description %></strong>
+    </h3>
+
+    <% if q.questiontype == 1 %>
+      <% q.selections.each_with_index do |selection, index| %>
+        <h4>
+          <div class="form-check">
+            <%= radio_button_tag "answers[#{q.id}][single_selection]", index + 1, false, class:'form-check-input', id:"#{q.id}-single_#{index}" %>
+            <%= label_tag "#{q.id}-single_#{index}", selection, class:'form-check-label'%>
+          </div>
+        </h4>
+      <% end %>
+
+      <% if q.has_comment_field == true %>
+        <div class="form-group">
+          <%= label_tag "", q.comment_field_description, class:'form-check-label'%>
+          <%= text_area_tag "answers[#{q.id}][description]", '', class:'form-control' %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if q.questiontype == 2 %>
+      <% q.multipleselections.each_with_index do |selection, index| %>
+        <h4>
+          <div class="form-check">
+            <%= check_box_tag "answers[#{q.id}][multiple_selection][#{index + 1}]", selection, false, class:'form-check-input', id:"#{q.id}-multiple_#{index}" %>
+            <%= label_tag "#{q.id}-multiple_#{index}", selection, class:'form-check-label'%>
+          </div>
+        </h4>
+      <% end %>
+
+      <% if q.has_comment_field == true %>
+        <div class="form-group">
+          <%= label_tag "", q.comment_field_description, class:'form-check-label'%>
+          <%= text_area_tag "answers[#{q.id}][multiple_selection][description]", '', class:'form-control' %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if q.has_date_field == true %>
+      <div class="md-form">
+        <%= text_field_tag "answers[#{q.id}][date_answer]", '', class:'form-control datepicker', id:"#{q.id}-date_answer" %>
+        <%= label_tag "#{q.id}-date_answer", q.date_field_description %>
+      </div>
+    <% end %>
+
+  <% end %>
+
+  <%= f.submit "提交", class:'btn btn-success', remote:true %>
+<% end %>
+
+
+
+
+
+
+
+
+
+<script>
+    function onReady() {
+        setTimeout(
+            function()
+            {
+                $('.datepicker').pickadate();
+                $('.mdb-select').materialSelect();
+            }, 100);
+    }
+
+    function openDatePicker(){
+        $('.datepicker').pickadate();
+    }
+
+    onReady()
+</script>

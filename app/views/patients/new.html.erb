@@ -1,0 +1,14 @@
+<%= render 'form', patient: @patient %>
+<script>
+    function onReady() {
+        setTimeout(
+            function()
+            {
+                $(".button-collapse").sideNav();
+                var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+                Ps.initialize(sideNavScrollbar);
+            }, 100);
+    }
+
+    onReady()
+</script>

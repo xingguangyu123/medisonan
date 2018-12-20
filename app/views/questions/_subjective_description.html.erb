@@ -1,0 +1,42 @@
+
+
+<div class="col-10 offset-1">
+  <%= simple_form_for @question, remote:true  do |f| %>
+    <%= f.input :description, label:'问题描述', class:'required validate', wrapper_html:{ class:'' } , input_html:{ class:'form-control' } %>
+    <hr>
+    <%= f.input :questiontype, :as => :hidden, input_html:{ value:"4" } %>
+    <div class="form-group purple-border">
+      <label>回答描述</label>
+      <textarea class="form-control disabled" id="exampleFormControlTextarea4" rows="3" placeholder="此处无需编辑"></textarea>
+    </div>
+
+    <div class="modal-footer">
+      <div class="btn-group" role="group" aria-label="button-group">
+        <%= f.button :submit, '完成', class:'btn btn-success btn-block', id:'subjectiveDescriptionForm', remote:true%>
+        <button type="button" class="btn btn-danger btn-block" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<script>
+    function onReady() {
+        $('#subjectiveDescriptionForm').click(closeCurrentModal)
+    }
+
+    function closeCurrentModal(){
+        $('#basicExampleModal').modal('hide');
+        setTimeout(
+            function()
+            {
+                $('#questionsList').empty();
+                $('#questionsList').append('<%= j render('questions/question_index') %>');
+            }, 100);
+    }
+
+    $('#basicExampleModal').on('hidden.bs.modal', function (e) {
+        $(this).find('form')[2].reset();
+    })
+
+    onReady()
+</script>

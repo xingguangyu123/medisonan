@@ -1,0 +1,64 @@
+<div class="card border-primary" style="height: 80vh">
+  <div class="card-body" style="background-image:url('../images/') ">
+    <ul style="height: 78vh; margin: 0; padding: 0; box-sizing: content-box; overflow: auto;" class="stepper linear" id="horizontal-stepper">
+      <li class="step active">
+        <div class="step-title waves-effect waves-dark">基本信息</div>
+        <div style="height: auto; box-sizing: border-box;" class="step-new-content">
+          <%= render 'dummy_surveys/form' %>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-title waves-effect waves-dark">编辑问卷</div>
+        <div style="height: auto; box-sizing: border-box;" class="step-new-content">
+          <!-- Button trigger modal -->
+          <%= render 'questions/new_questions' %>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-title waves-effect waves-dark">添加受访患者</div>
+        <div style="height: auto; box-sizing: border-box;"  class="step-new-content">
+
+          <%= render 'choosePatient' %>
+          <% if false %>
+          Finish!
+          <div class="step-actions">
+            <button class="waves-effect waves-dark btn-sm btn btn-primary m-0 mt-4" type="button">SUBMIT</button>
+          </div>
+          <% end %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('.stepper').mdbStepper();
+        jQuery.validator.setDefaults({
+            debug:false
+        });
+    })
+    function gotoStepTwo() {
+        $('#horizontal-stepper').nextStep();
+    }
+
+    function onReady() {
+        $('#questionForm').click(openCurrentModal);
+        validatearticleFunction();
+    }
+
+    function openCurrentModal(){
+        $('#basicExampleModal').modal('show');
+    }
+
+    function validatearticleFunction() {
+        $('#new_dummy_survey').validate({
+            debug: false,
+            rules: {'dummy_survey[name]': { required: true, minlength: 3, maxlength: 100 }
+            }
+        })
+    }
+
+    onReady()
+</script>

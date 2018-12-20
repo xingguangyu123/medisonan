@@ -1,0 +1,75 @@
+<% refresh_current_questions %>
+
+<div style="display: flex; flex-direction: column;height:100%;" id="questionsList">
+
+</div>
+
+<div class="row">
+  <div class="col-2">
+    <%= link_to "添加新问题",{},  class:"btn btn-primary", id:'new-question-modal', remote:true %>
+
+  </div>
+  <div class="col-2">
+    <%= link_to "从题库选择", {controller: 'question_libraries', action: 'show_list_for_survey'}, class:"btn btn-primary", id:'question-library-for-survey-modal', remote:true %>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-notify modal-info" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <ul class="nav nav-tabs nav-justified md-tabs primary-color" id="myTabJust" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab-just" data-toggle="tab" href="#home-just" role="tab" aria-controls="home-just" aria-selected="true"><i class="fa fa-list-ol ml-1 text-white"></i>     单项选择</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab-just" data-toggle="tab" href="#profile-just" role="tab" aria-controls="profile-just" aria-selected="false"><i class="fa fa-list ml-1 text-white"></i>     多项选择</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab-just" data-toggle="tab" href="#contact-just" role="tab" aria-controls="contact-just" aria-selected="false"><i class="fa fa-pencil ml-1 text-white"></i>     主观描述</a>
+          </li>
+        </ul>
+        <div class="tab-content card pt-5" id="myTabContentJust">
+          <div class="tab-pane fade show active" id="home-just" role="tabpanel" aria-labelledby="home-tab-just">
+            <%= render 'questions/single_selection' %>
+          </div>
+          <div class="tab-pane fade" id="profile-just" role="tabpanel" aria-labelledby="profile-tab-just">
+            <%= render 'questions/multiple_selection' %>
+          </div>
+          <div class="tab-pane fade" id="contact-just" role="tabpanel" aria-labelledby="contact-tab-just">
+            <%= render 'questions/subjective_description' %>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="questionLibraryForSurveyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog modal-notify modal-info modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-center">
+        <h2 class="heading">选择问题</h2>
+      </div>
+      <div class="modal-body" id="question-library-for-survey-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    function onReady() {
+        $('#new-question-modal').click(openNewQuestionModal);
+    }
+
+    function openNewQuestionModal(){
+        $('#basicExampleModal').modal('show');
+    }
+
+    onReady()
+</script>

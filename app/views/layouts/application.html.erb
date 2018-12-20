@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LBD</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'applicationHeader' %>
+  </head>
+
+  <body class="fixed-sn mdb-skin">
+    <header>
+      <%= render 'home/nav_side' %>
+      <%= render 'home/nav_header' %>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <% if false %>
+      <%= debug(params) if Rails.env.development? %>
+    <% end %>
+
+    <%= content_for :render_async %>
+    <%= render 'home/nav_footer' %>
+
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!-- Panel -->
+
+<div class="card mb-4">
+  <div class="card-header white-text primary-color">
+    <h2>随访项目一览表</h2>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+
+      <table class="table" id="survey-index-table">
+
+        <thead>
+        <tr>
+          <th class="font-weight-bold dark-grey-text">当前状态</th>
+          <th class="font-weight-bold dark-grey-text">项目名</th>
+          <th class="font-weight-bold dark-grey-text">项目描述</th>
+          <th class="font-weight-bold dark-grey-text">开始日期</th>
+          <th class="font-weight-bold dark-grey-text">详情</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <% @surveys.each do |survey| %>
+          <tr>
+            <td>
+              <% ran=rand(3) %>
+                <% if ran == 0 %>
+              <span class="badge red">尚未开始</span>
+                <% elsif ran == 1 %>
+              <span class="badge orange">正在进行</span>
+            <% else %>
+              <span class="badge green">已完成</span>
+            <% end %>
+            </td>
+            <td>
+              <%= survey.name %>
+            </td>
+            <td>
+              <%= survey.description%>
+            </td>
+            <td>
+              <%= survey.start_date %>
+            </td>
+            <td><%= link_to '查看', survey, class:'btn btn-primary btn-sm' %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+    function onReady() {
+        setTimeout(
+            function()
+            {
+                $('#survey-index-table').DataTable({
+                        "pagingType": "full_numbers",
+                        "autoWidth": true,
+                        "order": [[ 1, "desc" ]]
+                    }
+                );
+                $('#survey-index-table_wrapper').find('label').each(function () {
+                    $(this).parent().append($(this).children());
+                });
+                $('#survey-index-table_wrapper .dataTables_filter').find('input').each(function () {
+                    $('input').attr("placeholder", "Search");
+                    $('input').removeClass('form-control-sm');
+                });
+                $('#survey-index-table_wrapper .dataTables_length').addClass('d-flex flex-row');
+                $('#survey-index-table_wrapper .dataTables_filter').addClass('md-form');
+                $('#survey-index-table_wrapper select').removeClass(
+                    'custom-select custom-select-sm form-control form-control-sm');
+                $('#survey-index-table_wrapper select').addClass('mdb-select');
+                $('#survey-index-table_wrapper .mdb-select').materialSelect();
+                $('#survey-index-table_wrapper .dataTables_filter').find('label').remove();
+            }, 100);
+    }
+    onReady()
+</script>

@@ -1,0 +1,2 @@
+class DummySurvey < ApplicationRecord
+end
