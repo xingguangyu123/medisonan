@@ -62,6 +62,6 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 
-gem 'render_async'
+gem 'render_async', path:"vendor/gems/render_async-2.0.0"
 
 gem 'will_paginate-bootstrap4'
