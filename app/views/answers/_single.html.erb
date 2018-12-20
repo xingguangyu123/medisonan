@@ -5,6 +5,10 @@
 </div>
 
 <br>
+<button id="button-call" class="btn btn-success">拨打</button>
+<button id="button-hangup" class="btn btn-danger">挂断</button>
+
+
 <hr>
 
 <%= form_with scope: :sub_survey, url: create_answers_path do |f| %>
@@ -83,5 +87,147 @@
         $('.datepicker').pickadate();
     }
 
+    $(function () {
+
+        var device;
+
+        log('Requesting Capability Token...');
+        $.getJSON('https://chamoisee-moth-1299.twil.io/capability-token')
+            .then(function (data) {
+
+                device = new Twilio.Device(data.token,{ region: 'jp1'});
+
+                device.on('ready',function (device) {
+
+                });
+
+                device.on('error', function (error) {
+                 //   log('Twilio.Device Error: ' + error.message);
+                });
+
+                device.on('connect', function (conn) {
+
+
+                });
+
+                device.on('disconnect', function (conn) {
+                 //   log('Call ended.');
+
+                });
+
+                device.on('incoming', function (conn) {
+                    log('Incoming connection from ' + conn.parameters.From);
+                    var archEnemyPhoneNumber = '+17852848855';
+
+                    if (conn.parameters.From === archEnemyPhoneNumber) {
+                        conn.reject();
+                        log('It\'s your nemesis. Rejected call.');
+                    } else {
+                        // accept the incoming connection and start two-way audio
+                        conn.accept();
+                    }
+                });
+
+         //       setClientNameUI(data.identity);
+
+                device.audio.on('deviceChange', updateAllDevices.bind(device));
+
+                // Show audio selection UI if it is supported by the browser.
+                if (device.audio.isOutputSelectionSupported) {
+                   // document.getElementById('output-selection').style.display = 'block';
+                }
+            })
+            .catch(function (err) {
+                console.log(err);
+
+            });
+
+        // Bind button to make call
+        document.getElementById('button-call').onclick = function () {
+            // get the phone number to connect the call to
+            var params = {
+                To: "+8618602424191",
+
+            };
+
+        //    console.log('Calling ' + params.To + '...');
+            if (device) {
+                device.connect(params);
+            }
+        };
+
+        // Bind button to hangup call
+        document.getElementById('button-hangup').onclick = function () {
+        //    log('Hanging up...');
+            if (device) {
+                device.disconnectAll();
+            }
+        };
+
+
+
+        speakerDevices.addEventListener('change', function() {
+            var selectedDevices = [].slice.call(speakerDevices.children)
+                .filter(function(node) { return node.selected; })
+                .map(function(node) { return node.getAttribute('data-id'); });
+
+            device.audio.speakerDevices.set(selectedDevices);
+        });
+
+        ringtoneDevices.addEventListener('change', function() {
+            var selectedDevices = [].slice.call(ringtoneDevices.children)
+                .filter(function(node) { return node.selected; })
+                .map(function(node) { return node.getAttribute('data-id'); });
+
+            device.audio.ringtoneDevices.set(selectedDevices);
+        });
+
+
+        function updateAllDevices() {
+            updateDevices(speakerDevices, device.audio.speakerDevices.get());
+            updateDevices(ringtoneDevices, device.audio.ringtoneDevices.get());
+
+
+            // updateDevices(speakerDevices, );
+            // updateDevices(ringtoneDevices, device);
+        }
+
+        // Update the available ringtone and speaker devices
+        function updateDevices(selectEl, selectedDevices) {
+            selectEl.innerHTML = '';
+
+            device.audio.availableOutputDevices.forEach(function(device, id) {
+                var isActive = (selectedDevices.size === 0 && id === 'default');
+                selectedDevices.forEach(function(device) {
+                    if (device.deviceId === id) { isActive = true; }
+                });
+
+                var option = document.createElement('option');
+                option.label = device.label;
+                option.setAttribute('data-id', id);
+                if (isActive) {
+                    option.setAttribute('selected', 'selected');
+                }
+                selectEl.appendChild(option);
+            });
+        }
+
+        // Activity log
+        function log(message) {
+         //   var logDiv = document.getElementById('log');
+         //   logDiv.innerHTML += '<p>&gt;&nbsp;' + message + '</p>';
+         //   logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        // Set the client name in the UI
+        function setClientNameUI(clientName) {
+       //     var div = document.getElementById('client-name');
+       //     div.innerHTML = 'Your client name: <strong>' + clientName +
+       //         '</strong>';
+        }
+    });
     onReady()
 </script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://media.twiliocdn.com/sdk/js/client/v1.6/twilio.min.js"></script>

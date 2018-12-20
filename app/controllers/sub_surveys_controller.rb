@@ -1,4 +1,6 @@
+require 'twilio-ruby'
 class SubSurveysController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def show
     @sub = SubSurvey.find(params[:id])
     @survey = @sub.survey
@@ -7,6 +9,8 @@ class SubSurveysController < ApplicationController
   end
 
   def new_answer
+
+
     session[:current_patient_id] = params[:patient]
     @sub = SubSurvey.find(session[:current_sub_survey])
 

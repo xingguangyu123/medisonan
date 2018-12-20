@@ -61,6 +61,7 @@ gem 'simple_form'
 
 gem 'jquery-rails'
 gem 'font-awesome-rails'
+gem 'twilio-ruby'
 
 gem 'render_async', path:"vendor/gems/render_async-2.0.0"
 
